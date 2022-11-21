@@ -4,3 +4,42 @@ Requirements:
     2. urllib library in Python
     3. bs4 (BeautifulSoup) in Python
     4. requests library in Python
+
+
+Procedure: 
+
+    Step:- 1
+        import the above mentioned in our Python file where we want to run the application 
+
+    Step:- 2
+        we can use request library to get all the content of the website by using request.get()
+        Make requests instance and pass into URL to of the request module.
+        Pass the requests into a Beautifulsoup() function
+
+    Step:- 3
+        BeautifulSoup is library comes with an built in parser which helps us to extract the contents from the website.
+        using this parser we can find all the image tags from the website.
+
+                htmldata = getdata("https://www.sample.com/") 
+                soup = BeautifulSoup(htmldata, 'html.parser') 
+                for item in soup.find_all('img'):
+                    print(item['src'])
+
+    Step:- 4
+        Using the BeautifulSoup to extract the url or source of the image tag. Using this we will be able to retrieve all the image source and urls
+        after getting all the urls of the images. we can use the urllib library from Python
+
+    Step:- 5 
+        using urllib we can save all the images locally into our system by passing the source of the images into the urllib built in function.
+        urllib comes with built in method " request " which we can use to retrieve the url and save in our system.
+        
+
+        urllib.request.urlretrieve("http://www.sample.com/img.jpg", "local-filename.jpg")
+
+    Step:- 6 
+        we can use the BeautifulSoup to extract the text from the website by identifying all the <p></p> tags from the website.
+
+
+Conclusion:
+
+    using the above process we can extract the text and image from the website.
