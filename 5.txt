@@ -1,0 +1,6 @@
+Requirements:
+
+    1. Python 
+    2. urllib library in Python
+    3. bs4 (BeautifulSoup) in Python
+    4. requests library in Python

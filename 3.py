@@ -16,5 +16,5 @@ start = 0
 while(count != num):
     if valid_func(start, invalid_digits):
         count+=1
-    start += 1
+    start += 1
 print(start)
